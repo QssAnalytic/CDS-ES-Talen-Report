@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gotham-Thin";
+  src: url("./assets/fonts/Gotham-Thin.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("./assets/fonts/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url("./assets/fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("./assets/fonts/Gotham-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Helvetica-Light";
+  src: url("./assets/fonts/Helvetica-Light.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Helvetica-Light-Oblique";
+  src: url("./assets/fonts/Helvetica-Light-Oblique.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("./assets/fonts/Helvetica.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica-Bold";
+  src: url("./assets/fonts/Helvetica-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+.page-left {
+  position: relative;
+  min-height: 857px;
+  padding: 51px 64px 44px 51px;
+  width: 100%;
+  height: 100%;
+  page-break-after: always;
+}
+
+.page-right {
+  position: relative;
+  min-height: 857px;
+  padding: 51px 51px 44px 64px;
+  width: 100%;
+  height: 100%;
+  page-break-after: always;
+}
+
+#A4 {
+  color: #1b1136;
+  position: relative;
+  width: 612px;
+  height: 858px;
+  scale: 1.32;
+  margin-top: 136px;
+}
+
+@layer components {
+  .title {
+    @apply font-Helvetica-Light text-title leading-title -tracking-title;
+  }
+
+  .circle {
+    @apply inline-flex w-2 h-2 rounded-full;
+  }
+
+  .paragraph {
+    @apply h-fit space-y-5 flex flex-col justify-center;
+  }
+}
+
+@layer base {
+  h2 {
+    @apply text-2xl leading-7 -tracking-[0.24px] max-w-[264px] text-start font-Helvetica-Light;
+  }
+
+  h3 {
+    @apply text-base leading-4 font-Helvetica-Bold;
+  }
+
+  h4 {
+    @apply font-Helvetica-Bold;
+  }
+
+  h5 {
+    @apply text-base font-Helvetica-Light-Oblique leading-[18px];
+  }
+
+  table {
+    @apply table-fixed border-separate border-spacing-x-0.5 w-full text-[9px] leading-4 text-center font-Helvetica-Bold;
+  }
+
+  th {
+    @apply rounded-t-[3px] h-[26px]  bg-projects;
+  }
+
+  tbody > tr {
+    @apply even:bg-[#F0EFEF] h-[52px];
+  }
+}
+
+/* 
+ * Add the center and the radius using the size 
+ * and `stroke-width` values.
+ */
+.svg-indicator-track,
+.svg-indicator-indication {
+  cx: 51px;
+  cy: 51px;
+  r: 48px;
+  fill: transparent;
+  stroke-width: 4px;
+}
+
+/* Some color to highlight the rings */
+.svg-indicator-track {
+  stroke: #f2f2f2;
+}
+
+.svg-indicator-indication {
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-dasharray: 300px;
+  stroke-dashoffset: 0px;
+}
+
+.svg-div span {
+  font-family: Gotham-Bold;
+  font-size: 24px;
+}
+
+.svg-div div:first-child {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
